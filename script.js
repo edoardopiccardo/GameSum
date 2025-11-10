@@ -63,9 +63,12 @@ function controlloFineGioco(){
     }
     if(REM == 0){
         if(CUR == TOT){
-            alert("Hai vinto!");
+            alert("Hai vinto! Clicca OK per ricominciare");
+            gridContainer.innerHTML = '';
         } else {
-            alert("Hai perso!");
+            alert("Hai perso! Clicca OK per ricominciare");
+            gridContainer.innerHTML = '';
         }       
     }
+
 }
