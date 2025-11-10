@@ -2,6 +2,7 @@ function getRandomRange(min, max) {
     return min + Math.floor(Math.random() * (max + 1 - min));
 }
 
+window.onload = function gioco() {
 var CUR = 0;
 
 const gridContainer = document.querySelector('.body_game');
@@ -35,6 +36,8 @@ document.getElementById('nt_val').innerText = NT;
 document.getElementById('cur_val').innerText = CUR;
 document.getElementById('rem_val').innerText = REM;
 
+
+
 function gestisciClick(button) {
 
     if(button.classList.contains('cella_attiva')){
@@ -57,18 +60,22 @@ function gestisciClick(button) {
     controlloFineGioco();
 }
 
+
 function controlloFineGioco(){
     if(CUR == TOT){
         alert("Hai vinto!");
     }
     if(REM == 0){
         if(CUR == TOT){
-            alert("Hai vinto! Clicca OK per ricominciare");
+            alert("Hai vinto! Clicca OK per giocare ancora.");
             gridContainer.innerHTML = '';
+            gioco();
         } else {
-            alert("Hai perso! Clicca OK per ricominciare");
+            alert("Hai perso! Clicca OK per giocare ancora.");
             gridContainer.innerHTML = '';
+            gioco();
         }       
     }
+}
 
 }
