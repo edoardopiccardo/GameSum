@@ -1,0 +1,48 @@
+.title {
+    text-align: center;
+}
+
+.info_gioco{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.body_game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 5px; 
+    /* rendi la griglia quadrata: larghezza responsiva e rapporto 1:1 */
+    width: min(600px, 90%);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    /* righe uguali alle colonne per ottenere celle quadrate */
+    grid-template-rows: repeat(3, 1fr);
+    border: 5px solid black;
+    background-color: black;
+}
+
+.cella_inattiva {
+    background-color: yellow !important;
+    color: black !important;
+}
+
+
+.cella_attiva {
+    background-color: red !important;
+    color: white !important;
+}
+
+.body_game button {
+    width: 100%;
+    height: 100%;
+    min-height: 40px;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
